@@ -1,2 +1,2 @@
 # RAG_demo
-Dummy Project for N8N Demo
+Streamlit RAG Project for n8n demo

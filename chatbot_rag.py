@@ -1,4 +1,3 @@
-#import streamlit
 import streamlit as st
 import os
 from dotenv import load_dotenv
@@ -63,7 +62,7 @@ if prompt:
 
 
     # Create the system prompt
-    system_prompt = f"""You are an AI assistant that has information about the document provided below.\
+    system_prompt = f"""You are an AI assistant that has information about the document provided below.
     If the question has nothing to do with the context, give generic answers like a normal AI Assistant. Thank you!\nContext: {docs_text}"""
 
     st.session_state.messages.append(SystemMessage(system_prompt))

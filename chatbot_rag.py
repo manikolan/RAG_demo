@@ -8,7 +8,7 @@ from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
 
 load_dotenv()
 
-st.title("RAG Chatbot for N8N Demo")
+st.title("Jira Bug Fix RAG Chatbot completed")
 
 # initialize pinecone database
 pc = Pinecone(api_key=os.environ.get("PINECONE_API_KEY"))
@@ -62,7 +62,7 @@ if prompt:
         docs_text += match["metadata"].get("text", "") + "\n"
 
     # Create the system prompt
-    system_prompt = f"""You are an AI assistant that has information about the document provided below.\
+    system_prompt = f"""You are an AI assistant that has information about the document provided below.
     If the question has nothing to do with the context, give generic answers like a normal AI Assistant. Thank you!
 Context: {docs_text}"""
 
